@@ -1,5 +1,6 @@
 require 'bundler/setup'
 Bundler.require
+require "pry"
 
 require 'active_record'
 require 'rake'
@@ -13,3 +14,6 @@ DB = ActiveRecord::Base.connection
 if ENV["PLAYLISTER_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
+
+# binding.pry
+# 0
